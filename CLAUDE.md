@@ -14,6 +14,8 @@ pip install -r requirements.txt
 
 ```bash
 uvicorn main:app --reload   # run dev server (hot reload on :8000)
+pytest tests/ -v            # run all tests
+pytest tests/test_users.py  # run a single test file
 ```
 
 ## Architecture
