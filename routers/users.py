@@ -24,6 +24,11 @@ def get_user(user_id: int):
     return {"id": user_id}
 
 
+@router.put("/{user_id}")
+def update_user(user_id: int, user: UserCreate):
+    return {"id": user_id, **user.model_dump()}
+
+
 @router.delete("/{user_id}", status_code=204)
 def delete_user(user_id: int):
     return None
