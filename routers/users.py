@@ -22,3 +22,8 @@ def create_user(user: UserCreate):
 @router.get("/{user_id}")
 def get_user(user_id: int):
     return {"id": user_id}
+
+
+@router.delete("/{user_id}", status_code=204)
+def delete_user(user_id: int):
+    return None
